@@ -120,6 +120,15 @@ body {
 	height: 20px;
 }
 
+.carousel-inner > .item {
+    position: relative;
+    display: none;
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}.transition(.3s ease-in-out left);
+
 
 /*
 .grid div:nth-child(even) {

@@ -1,6 +1,6 @@
 <div class="slider">
 
-	<div id="demo" class="carousel slide" data-ride="carousel">
+	<div id="demo" class="carousel slide" data-ride="carousel" data-interval="3500">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
