@@ -1,0 +1,1 @@
+<div class="samsung-t">samsung tableti</div>
