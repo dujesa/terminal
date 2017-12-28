@@ -14,26 +14,29 @@ body {
 	color: #000;
 	font-size: 100%;
 	font-family: Verdana,sans-serif;
+
+
 }
 
 .grid {
 	display: grid;
 	grid-auto-rows: minmax(60px,auto);
 	grid-template-columns: 1fr 4fr 1fr;
-	grid-template-rows: 60px 2fr 6fr 1fr;
-	grid-template-areas: 
+	grid-template-rows: 60px 2fr 6fr 60px;
+	/*grid-template-areas: 
 	"header header header"
 	". slider sidebar"
 	". content sidebar"
 	"footer footer footer";
+*/
 }
-
 .header {
-	grid-area: header;
-	background-color: #bbb;
+	/*grid-area: header;*/
+	grid-area: 1/1/2/4;
+	background-color: #c3c3c3;
 	/*ostatak ga pretvaran u grid za manje gridove u njemu*/
 	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-columns: 2fr 3fr 2fr;
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas: 
 	"logo search userActions"
@@ -42,26 +45,46 @@ body {
 
 }
 .slider {
-	grid-area: slider;
+	/*grid-area: slider;*/
+	grid-area: 2/2/3/3;
 	background-color: #bcd;
 }
-.sidebar {
-	grid-area: sidebar;
+.sidebarLeft {
+	grid-area: 2/1/4/2/*sidebar*/;
+	background-color: #abc;
+}
+.sidebarRight {
+	grid-area: 2/3/4/4/*sidebar*/;
 	background-color: #abc;
 }
 .content {
-	grid-area: content;
+	grid-area: 3/2/4/3/*content*/;
 	background-color: #eff;
 }
 .footer {
-	grid-area: footer;
+	grid-area: 4/1/5/4/*footer*/;
 	background-color: #adf;
+}
+.prijava {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(60px, auto);
+
+	grid-area: 2/2/4/3;
+	background-color: #eee;
+
+}
+.kosarica {
+	grid-area: 2/2/4/3;
+	background-color: #def;
 }
 
 /*elementi unutar headera*/
 .logo {
 	grid-area: logo;
-
+}
+.logo img {
+	height: 100%;
 }
 .search {
 	grid-area: search;
@@ -69,7 +92,7 @@ body {
 	height: 80%;
 	/*radin u njoj grid za search input i button elemente*/
 	display: grid;
-	grid-template-columns: 7fr 5fr 1fr 7fr;
+	grid-template-columns: 5fr 5fr 1fr 5fr;
 	grid-template-areas: 
 	". searchInput searchButton .";
 
@@ -79,8 +102,20 @@ body {
 	grid-area: categories;
 }
 .userActions {
+
 	grid-area: userActions;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 
+	"uid headerIcons logout";
 }
+ .userActions:hover {
+
+ 	color:#dedede;
+ 	cursor: pointer;
+}
+
 .userCart {
 	grid-area: userCart;
 }
@@ -88,7 +123,7 @@ body {
 
 .search input {
 
-	color: #1b7fc1;
+	color: #666;
 	background-color: #f5f5f5;
 	border: none;
 	border-top-left-radius: 3px;
@@ -120,6 +155,49 @@ body {
 	height: 20px;
 }
 
+.login {
+
+	grid-area: 1/1/2/4;
+}
+.uid {
+
+	grid-area: 1/1/2/2;
+
+    border-right: 1px solid black;
+}
+#profileImage {
+
+	border-radius: 50%;
+	max-height: 80%;
+
+}
+.headerIcons {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+
+	grid-area: 1/2/2/3;
+	max-height: 50%;
+}
+.icon1 {
+	grid-area: 1/1/2/2;
+
+}
+.icon2 {
+	grid-area: 1/2/2/3;	
+}
+.icon3 {
+	grid-area: 1/3/2/4;	
+}
+.logout {
+
+	grid-area: 1/3/2/4;
+	max-height: 5px;
+
+
+}
+
+/*elementi slidera*/
 .carousel-inner > .item {
     position: relative;
     display: none;
@@ -129,6 +207,29 @@ body {
     transition: 0.6s ease-in-out left;
 }.transition(.3s ease-in-out left);
 
+.slider.prijava.content {
+
+	background-color: red ;
+}
+
+/*elementi prijave*/
+.signIn .container {
+
+
+	margin: 10% 15% 10% 35% ;
+	width: 50%;
+
+}
+.signUp .container {
+
+	margin: 10% 35% 10% 15%;
+	width: 50%;
+}
+
+.prijava button:hover {
+
+	cursor: pointer;
+}
 
 /*
 .grid div:nth-child(even) {

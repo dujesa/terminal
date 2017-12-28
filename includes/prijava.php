@@ -1,1 +1,0 @@
-<div class="prijava">Prijava | Registracija</div>
