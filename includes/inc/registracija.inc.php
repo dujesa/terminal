@@ -1,7 +1,7 @@
 <?php
 	
-	require_once $_SERVER["DOCUMENT_ROOT"] . '/terminal/includes/inc/dbh.inc.php';
-
+	//require_once $_SERVER["DOCUMENT_ROOT"] . '/terminal/includes/inc/dbh.inc.php';
+	require '/home/dsaric/public_html/terminal/includes/inc/dbh.inc.php';
 	//provjera jeli klika botun ili doša na str urlom
 	if(isset($_POST['submit'])) {
 

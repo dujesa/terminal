@@ -1,1 +1,0 @@
-<div class="graficka">Graficke kartice</div>

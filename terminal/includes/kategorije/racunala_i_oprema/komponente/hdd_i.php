@@ -1,1 +1,0 @@
-<div class="hdd-i">Hard diskovi - interni</div>

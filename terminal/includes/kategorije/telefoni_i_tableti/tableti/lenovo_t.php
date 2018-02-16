@@ -1,1 +1,0 @@
-<div class="lenovo">lenovo tableti</div>
