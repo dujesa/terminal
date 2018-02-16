@@ -1,1 +1,0 @@
-<div class="monitor">Monitori</div>

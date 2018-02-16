@@ -7,11 +7,11 @@
 
 	
 	//u superglobalnoj varijabli _server pod kljucen document_root, vrati mi C:\wamp64\www//
-	require_once '/home/dsaric/public_html/terminal/includes/head.php'; 
-	require_once '/home/dsaric/public_html/terminal/includes/slider.php'; 
-	require_once '/home/dsaric/public_html/terminal/includes/content.php'; 
-	require_once '/home/dsaric/public_html/terminal/includes/prefooter.php'; 
-	require_once '/home/dsaric/public_html/terminal/includes/footer.php'; 
+	require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/head.php'; 
+	require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/slider.php'; 
+	require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/content.php'; 
+	require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/prefooter.php'; 
+	require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/footer.php'; 
 
 ?>
 

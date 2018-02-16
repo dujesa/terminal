@@ -1,1 +1,0 @@
-<div class="konzole-i-igre">Konzole i igre</div>

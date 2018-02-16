@@ -1,1 +1,0 @@
-<div class="huawei-t">huawei tableti</div>

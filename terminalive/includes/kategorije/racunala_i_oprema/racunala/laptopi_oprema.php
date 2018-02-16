@@ -1,1 +1,0 @@
-<div class="laptopi-oprema">Laptopi - Dodatna oprema</div>

@@ -6,8 +6,7 @@ session_start();
 	//provjera jeli kliknut submit
 	if(isset($_POST['loginSubmit'])) {
 
-	//require_once $_SERVER['DOCUMENT_ROOT'] . '/terminal/includes/inc/dbh.inc.php';
-	require '/home/dsaric/public_html/terminal/includes/inc/dbh.inc.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/inc/dbh.inc.php';
 
 		//pretvaranje unesenih stringova u tip teksta za bazu
 		$username	= mysqli_real_escape_string($conn, $_POST['loginUsername']);

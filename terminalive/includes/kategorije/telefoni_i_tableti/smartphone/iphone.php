@@ -1,1 +1,0 @@
-<div class="iphone">Iphone</div>

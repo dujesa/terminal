@@ -30,10 +30,7 @@
 
 
 				<?php
-
-					ini_set('display_errors', 1);
-
-					if(isset($_SESSION["cart"]))
+					if(isset($_SESSION["cart"]) && (isset($_SESSION['username'])))
 					{
 
 					foreach ($_SESSION["cart"] as $proizvodi => $proizvod) 
@@ -61,7 +58,7 @@
 						    <td class="cijenaP"><?php echo $proizvod["cijena"] . ',00 Kn' ?></td>
 						   <td>
 
-						    	<select class="selector">
+						    	<!--<select class="selector">
 								  <option>1</option>
 								  <option>2</option>
 								  <option>3</option>
@@ -77,7 +74,8 @@
 								  <option>13</option>
 								  <option>14</option>
 								  <option>15</option>
-								</select>
+								</select>-->
+								<?php echo $proizvod["količina"]?>
 
 							</td>
 						    <td class="cijenaP"><?php echo $proizvod["cijena"]*$proizvod["količina"] . ",00Kn" ?></td>
@@ -87,199 +85,7 @@
 					}
 				}
 				?>
-<!--
-			 <tr>
-			    <td >
-			    	<div class="gridTD">
-			    	<div class="remove"><img src="images/icons/remove.png"></div>
-					<div><img class="slikajebena" src="images/konzole/PlayStation_4.png" height=95 width=106></div>
-					<div class="imeProizvoda">Ultrabook Asus Zenbook UX430UA-GV340T, 14" FHD, Intel Core i5-8250U up to 3.4GHz, 8GB DDR3, 256GB SSD</div>
-				</div>
-			    </td>
-			    <td class="cijenaP">2100 Kn</td>
-			   <td>
 
-			    	<select class="selector">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					  <option>6</option>
-					  <option>7</option>
-					  <option>8</option>
-					  <option>9</option>
-					  <option>10</option>
-					  <option>11</option>
-					  <option>12</option>
-					  <option>13</option>
-					  <option>14</option>
-					  <option>15</option>
-					</select>
-
-				</td>
-			    <td class="cijenaP">2100 Kn</td>
-			  </tr>
-			   <tr>
-			    <td >
-			    	<div class="gridTD">
-			    	<div class="remove"><img src="images/icons/remove.png"></div>
-					<div><img class="slikajebena" src="images/konzole/PlayStation_4.png" height=95 width=106></div>
-					<div class="imeProizvoda">Ultrabook Asus Zenbook UX430UA-GV340T, 14" FHD, Intel Core i5-8250U up to 3.4GHz, 8GB DDR3, 256GB SSD</div>
-				</div>
-			    </td>
-			    <td class="cijenaP">2100 Kn</td>
-			    <td>
-
-			    	<select class="selector">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					  <option>6</option>
-					  <option>7</option>
-					  <option>8</option>
-					  <option>9</option>
-					  <option>10</option>
-					  <option>11</option>
-					  <option>12</option>
-					  <option>13</option>
-					  <option>14</option>
-					  <option>15</option>
-					</select>
-
-				</td>
-			    <td class="cijenaP">2100 Kn</td>
-			  </tr>
-			  <tr>
-			    <td >
-			    	<div class="gridTD">
-			    	<div class="remove"><img src="images/icons/remove.png"></div>
-					<div><img class="slikajebena" src="images/konzole/PlayStation_4.png" height=95 width=106></div>
-					<div class="imeProizvoda">Ultrabook Asus Zenbook UX430UA-GV340T, 14" FHD, Intel Core i5-8250U up to 3.4GHz, 8GB DDR3, 256GB SSD</div>
-				</div>
-			    </td>
-			    <td class="cijenaP">2100 Kn</td>
-			   <td>
-
-			    	<select class="selector">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					  <option>6</option>
-					  <option>7</option>
-					  <option>8</option>
-					  <option>9</option>
-					  <option>10</option>
-					  <option>11</option>
-					  <option>12</option>
-					  <option>13</option>
-					  <option>14</option>
-					  <option>15</option>
-					</select>
-
-				</td>
-			    <td class="cijenaP">2100 Kn</td>
-			  </tr>
-			   <tr>
-			    <td >
-			    	<div class="gridTD">
-			    	<div class="remove"><img src="images/icons/remove.png"></div>
-					<div><img class="slikajebena" src="images/konzole/PlayStation_4.png" height=95 width=106></div>
-					<div class="imeProizvoda">Ultrabook Asus Zenbook UX430UA-GV340T, 14" FHD, Intel Core i5-8250U up to 3.4GHz, 8GB DDR3, 256GB SSD</div>
-				</div>
-			    </td>
-			    <td class="cijenaP">2100 Kn</td>
-			    <td>
-
-			    	<select class="selector">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					  <option>6</option>
-					  <option>7</option>
-					  <option>8</option>
-					  <option>9</option>
-					  <option>10</option>
-					  <option>11</option>
-					  <option>12</option>
-					  <option>13</option>
-					  <option>14</option>
-					  <option>15</option>
-					</select>
-
-				</td>
-			    <td class="cijenaP">2100 Kn</td>
-			  </tr>
-			  <tr>
-			    <td >
-			    	<div class="gridTD">
-			    	<div class="remove"><img src="images/icons/remove.png"></div>
-					<div><img class="slikajebena" src="images/konzole/PlayStation_4.png" height=95 width=106></div>
-					<div class="imeProizvoda">Ultrabook Asus Zenbook UX430UA-GV340T, 14" FHD, Intel Core i5-8250U up to 3.4GHz, 8GB DDR3, 256GB SSD</div>
-				</div>
-			    </td>
-			    <td class="cijenaP">2100 Kn</td>
-			    <td>
-
-			    	<select class="selector">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					  <option>6</option>
-					  <option>7</option>
-					  <option>8</option>
-					  <option>9</option>
-					  <option>10</option>
-					  <option>11</option>
-					  <option>12</option>
-					  <option>13</option>
-					  <option>14</option>
-					  <option>15</option>
-					</select>
-
-				</td>
-			    <td class="cijenaP">2100 Kn</td>
-			  </tr>
-			  <tr>
-			    <td >
-			    	<div class="gridTD">
-			    	<div class="remove"><img src="images/icons/remove.png"></div>
-					<div><img class="slikajebena" src="images/konzole/PlayStation_4.png" height=95 width=106></div>
-					<div class="imeProizvoda">Ultrabook Asus Zenbook UX430UA-GV340T, 14" FHD, Intel Core i5-8250U up to 3.4GHz, 8GB DDR3, 256GB SSD</div>
-				</div>
-			    </td>
-			    <td class="cijenaP">2100 Kn</td>
-			    <td>
-
-			    	<select class="selector">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					  <option>6</option>
-					  <option>7</option>
-					  <option>8</option>
-					  <option>9</option>
-					  <option>10</option>
-					  <option>11</option>
-					  <option>12</option>
-					  <option>13</option>
-					  <option>14</option>
-					  <option>15</option>
-					</select>
-
-				</td>
-			    <td class="cijenaP">2100 Kn</td>
-			  </tr>-->
 		</table>
 	</div>
 	<div class="display" style="height:420px">

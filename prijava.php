@@ -8,9 +8,12 @@
 
 	
 	//u superglobalnoj varijabli _server pod kljucen document_root, vrati mi C:\wamp64\www//
-	require '/home/dsaric/public_html/terminal/includes/head.php'; 
-	require '/home/dsaric/public_html/terminal/includes/contentPrijava.php'; 
-	require '/home/dsaric/public_html/terminal/includes/prefooter.php'; 
-	require '/home/dsaric/public_html/terminal/includes/footer.php'; 
+	require $_SERVER["DOCUMENT_ROOT"] . '/includes/head.php'; 
+	require $_SERVER["DOCUMENT_ROOT"] . '/includes/contentPrijava.php'; 
+	require $_SERVER["DOCUMENT_ROOT"] . '/includes/prefooter.php'; 
+	require $_SERVER["DOCUMENT_ROOT"] . '/includes/footer.php'; 
 
 ?>
+
+
+

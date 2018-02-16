@@ -4,7 +4,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 session_start();
 
-	if(isset($_POST["dodajUKosaricu"]))
+	if(isset($_POST["dodajUKosaricu"]) && (isset($_SESSION["username"])))
 	{
 			if(isset($_SESSION["cart"]))
 			{
@@ -28,7 +28,7 @@ session_start();
 				{
 					$pozicijaUNizu = array_search($_POST["hidden_name"], array_column($_SESSION["cart"], 'naziv'));
 					$_SESSION["cart"][$pozicijaUNizu]["količina"] += 1;
-					
+					$_SESSION["cijenaAktivneKošarice"] += $_SESSION["cart"][$pozicijaUNizu]["cijena"];
 
 				}
 		
@@ -78,7 +78,13 @@ session_start();
 		header('Location: ' . $_SERVER['HTTP_REFERER']);
 		exit();
 	}
-	
-
+	else if(!isset($_SESSION["username"]))
+	{
+		//header('Location: ' . $_SERVER['HTTP_REFERER']);
+		header('Location: ../../prijava.php');
+		//script>alert("Prijava potrebna")</script>
+		
+		
+	}
 
 ?>
