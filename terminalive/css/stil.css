@@ -1,0 +1,270 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Jura', sans-serif;
+	font-size: 105%;
+	color:#0e5d88;
+	font-weight: bold;
+}
+html, body {
+	height: 100%;
+	
+}
+
+body {
+	text-align: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-auto-rows: minmax(60px,auto);
+	grid-template-rows: 100px 500px 15px 6fr 15px 150px 40px;
+	grid-template-areas: 
+	"header header header"
+	"slider slider slider"
+	". . ."
+	". content ."
+	". . ."
+	"prefooter prefooter prefooter"
+	"footer footer footer";
+}
+.categories{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color:#0e5d88;
+}
+.btn-default{
+	background-color:inherit;
+	color:white;
+	font-weight: bold;
+}
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.header {
+	grid-area: header;
+	/*ostatak ga pretvaran u grid za manje gridove u njemu*/
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+	"logo search userActions"
+	"logo categories userCart";
+}
+
+.slider {
+	grid-area: slider;
+	background-color: #bcd;
+}
+
+.content {
+	grid-area: content;
+	display:grid;
+	grid-template-rows:400px 20px 1fr 20px 1fr 500px 1fr;
+	grid-row-gap: 15px;
+}
+.categoryContent{
+	display:grid;
+	grid-column-gap:10px;
+	grid-row-gap:10px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.categoryContent > div{
+	background:url(cc.jpg) 100% 100% no-repeat;
+    transition:all 0.3s ease;
+    padding:30px 0px 0px 0px;
+}
+.categoryContent .cat a:hover{
+	text-decoration: none;
+}
+.cat:hover
+{
+        -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        transform: scale(1.03);
+}
+.sales{
+	background-color:red;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.cat{
+	display:grid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tekst{
+	color:#fff !important;
+}
+.products{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap:10px;
+}
+.product{
+	display:grid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	grid-template-rows: 2fr auto auto auto;
+
+}
+.media{
+	background-color:black;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.btn-primary{
+	width:100%;
+	margin-bottom:5px;
+	border-radius: 0;
+}
+/*elementi unutar headera*/
+.logo {
+	grid-area: logo;
+	margin-top: 20px;
+
+}
+.search {
+	grid-area: search;
+	margin-top: 6px;
+	height: 60%;
+	color:#0e5d88;
+	/*radin u njoj grid za search input i button elemente*/
+	display: grid;
+	grid-template-columns: 7fr 5fr 1fr 7fr;
+	grid-template-areas: 
+	". searchInput searchButton .";
+}
+.search > input{
+	color:#0e5d88;
+}
+.categories {
+	grid-area: categories;
+}
+.userActions {
+	grid-area: userActions;
+	margin-top: 6px;
+	
+}
+.userActions > a{
+	color:#0e5d88;
+}
+.userCart {
+	grid-area: userCart;
+}
+.userCart > a{
+	color:#0e5d88;
+}
+
+.search input {
+
+	color: #1b7fc1;
+	background-color: #f5f5f5;
+	border: none;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	/*da ne ostaje oznaceno kad se klikne
+	outline: none;*/
+	grid-area: searchInput;
+
+}
+.search button {
+	
+	/*da ne ostaje oznaceno kad se klikne*/
+	outline: none;
+	background-color: #eee;
+	border: none;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	/*kad ga mouseovera da bude pokazivač*/
+	cursor: pointer;
+	grid-area: searchButton;
+
+}
+.search button:hover {
+	background-color: #e9e9e9;
+}
+
+.search button img {
+
+	height: 20px;
+}
+.prefooter{
+	grid-area: prefooter;
+	background-color: #d4d6d8;
+
+	display:grid;
+	grid-template-columns: 1fr 6fr 6fr 6fr 1fr;
+	align-items: center;
+	grid-template-areas: 
+	". contact location info return";
+	grid-column-gap:20px;
+}
+
+.footer {
+	grid-area: footer;
+	background-color: #8f9393;
+	align-items: center;
+	display:grid;
+	grid-template-columns: 1fr 6fr 6fr 6fr 1fr;
+	grid-template-areas: 
+	". cards copyright text .";
+}
+
+.contact{
+	grid-area: contact;
+	display:grid;
+
+	grid-template-areas: 
+	"symbol text";
+	padding:20px 20px 20px 20px;
+}
+.location{
+	grid-area:location;
+		display:grid;
+
+	grid-template-areas: 
+	"symbol text";
+	padding:20px 20px 20px 20px;
+}
+.info{
+	grid-area: info;
+	display:grid;
+
+	grid-template-areas: 
+	"symbol text";
+	padding:20px 20px 20px 20px;
+}
+.cards{
+	grid-area: cards;
+	
+	
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+.kartica{
+	border-right:solid 1px black;
+}
+
+.copyright{
+	grid-area: copyright;
+}
+.return{
+	grid-area: return;
+}
+.text{
+	grid-area:text;
+	font-size: 72%;
+}
+/*
+.grid div:nth-child(even) {
+	background-color: #fff;
+}
+.grid div:nth-child(odd) {
+	background-color: #555;
+}*/
+/*za kompjutere(zaslone)*/
+@media 
